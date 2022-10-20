@@ -1,2 +1,3 @@
 # module-14-mvc-tech-blog
 Blog site for posting (and commenting!)
+PLEASE NOTE THAT THE SEEDED USERS CANNOT BE LOGGED IN, AS THEIR PASSWORDS HAVE NOT BEEN PASSED THROUGH BCRYPT
