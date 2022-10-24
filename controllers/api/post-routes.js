@@ -1,20 +1,20 @@
 const router = require('express').Router();
-const { Comment, User } = require('../../models');
+const { Post, User } = require('../../models');
 
-// CREATE new comment
+// CREATE new post
 router.post('/', async (req, res) => {
-    console.log("Post comment req received!!!");
-    // console.log(req);
+    console.log("New post req received!!!");
     try {
-      const dbCommentData = await Comment.create({
+      const dbPostData = await Post.create({
+        title: req.body.title,
         content: req.body.content,
         date: req.body.date,
         user_id: req.session.loggedUser,
-        post_id: 1,
+        post_id: req.body.post_id,
       });
   
       req.session.save(() => {
-        res.status(200).json(dbCommentData);
+        res.status(200).json(dbPostData);
       });
     } catch (err) {
       console.log(err);

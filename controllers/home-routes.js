@@ -47,7 +47,6 @@ router.get('/post/:id', withAuth, async (req, res) => {
 // TODO: Dashboard route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    console.log(req.session);
     const dbPostData = await Post.findAll({
       where: {
         user_id: req.session.loggedUser
@@ -61,6 +60,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     res.render('dashboard', {
       posts,
       loggedIn: req.session.loggedIn,
+      loggedUser: req.session.loggedUser,
     });
   } catch (err) {
     console.log(err);
