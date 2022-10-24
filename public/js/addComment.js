@@ -1,10 +1,10 @@
 const commentFormHandler = async (event) => {
     event.preventDefault();
     console.log("save comment button has been pressed!!");
-    // today = new Date;
+    let today = new Date().toLocaleDateString();
     const newComment = {
       content : document.querySelector('#new-comment').value.trim(),
-      date : "10/23/2022",
+      date : today,
       // post_id : location.pathname,
     }
       
@@ -15,10 +15,10 @@ const commentFormHandler = async (event) => {
         body: JSON.stringify(newComment),
         headers: { 'Content-Type': 'application/json' },
       });
-      console.log(req);
+      
       if (response.ok) {
         console.log("JS COMMENT RESPONSE OKAYYYYYYYYYYYYYYYY");
-        // document.location.replace('/');
+        document.location.reload();
       } else {
         alert('Failed to post comment.');
       }

@@ -1,8 +1,10 @@
 <section class="container">
   <h3 class="post-name">{{post.title}}</h3>
-  <section class="flex-row justify-center">
+  <section class="flex-column justify-center">
     <p>by {{post.user.username}} on {{format_date post.date}}</p>
-    <p>{{post.content}}</p>
+    <div class="post-content">
+      <p>{{post.content}}</p>
+    </div>
     <div>
       {{#each post.comments as |comment|}}
       {{> comment-details}}
@@ -11,7 +13,7 @@
     <form class="form comment-form">
       <div class="form-group">
         <label for="comment">Add a comment:</label>
-        <input class="form-input" type="text" id="new-comment"/>
+        <input class="form-input" type="text" id="new-comment" />
       </div>
       <div class="form-group">
         <button class="btn btn-primary" type="submit">save comment</button>
@@ -20,6 +22,8 @@
   </section>
 </section>
 
-{{!-- <script src="../public/js/addComment.js"></script> --}}
-{{!-- <script src="./js/addComment.js"></script> --}}
+{{!--
+<script src="../public/js/addComment.js"></script> --}}
+{{!--
+<script src="./js/addComment.js"></script> --}}
 <script src="/js/addComment.js"></script>

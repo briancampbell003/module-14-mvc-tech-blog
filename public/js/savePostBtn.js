@@ -1,10 +1,11 @@
 const savePostBtnHandler = async (event) => {
     event.preventDefault();
     console.log("save post button has been pressed!!");
+    let today = new Date().toLocaleDateString();
     const newPost = {
       title: document.querySelector('#new-post-title').value.trim(),
       content : document.querySelector('#new-post-content').value.trim(),
-      date : "10/23/2022",
+      date : today,
     }
       
     console.log(newPost);
@@ -17,7 +18,7 @@ const savePostBtnHandler = async (event) => {
 
       if (response.ok) {
         console.log("JS COMMENT RESPONSE OKAYYYYYYYYYYYYYYYY");
-        // document.location.replace('/dashboard');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to post your new post.');
       }
