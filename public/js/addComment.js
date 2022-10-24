@@ -5,10 +5,12 @@ const commentFormHandler = async (event) => {
     const newComment = {
       content : document.querySelector('#new-comment').value.trim(),
       date : today,
-      // post_id : location.pathname,
+      post_id : location.pathname,
     }
       
     console.log(newComment);
+    console.log(document.location.pathname);
+
     if (newComment) {
       const response = await fetch('/api/comments/', {
         method: 'POST',

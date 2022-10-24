@@ -27,14 +27,6 @@ Comment.init(
         key: 'id',
       },
     },
-    // user_username: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   references: {
-    //     model: 'user',
-    //     key: 'username',
-    //   },
-    // },
     post_id: {
       type: DataTypes.INTEGER,
       allowNull: false,

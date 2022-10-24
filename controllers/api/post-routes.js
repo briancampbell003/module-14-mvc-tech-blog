@@ -10,7 +10,6 @@ router.post('/', async (req, res) => {
         content: req.body.content,
         date: req.body.date,
         user_id: req.session.loggedUser,
-        post_id: req.body.post_id,
       });
   
       req.session.save(() => {
