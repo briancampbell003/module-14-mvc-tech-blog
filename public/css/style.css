@@ -126,3 +126,15 @@ nav a:hover {
   align-content: flex-start;
   align-items: center;
 }
+
+.new-post-form {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  left: 30vw;
+  width: 40vw;
+}
+
+#new-post-content {
+  height: 250px;
+}

@@ -46,15 +46,40 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
 // TODO: Dashboard route
 router.get('/dashboard', withAuth, async (req, res) => {
-    try {
-      
-      res.render('dashboard', { loggedIn: req.session.loggedIn });
-      
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
+  try {
+    console.log(req.session);
+    const dbPostData = await Post.findAll({
+      where: {
+        user_id: req.session.loggedUser
+      }
+    });
+
+    const posts = dbPostData.map((post) =>
+      post.get({ plain: true })
+    );
+
+    res.render('dashboard', {
+      posts,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
+
+// New post route
+router.get('/newPost', withAuth, async (req, res) => {
+  try {
+    res.render('newpost', {
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 
 // GET log-in route
 router.get('/login', (req, res) => {
