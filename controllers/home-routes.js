@@ -28,11 +28,15 @@ router.get('/post/:id', withAuth, async (req, res) => {
       const dbPostData = await Post.findByPk(req.params.id, {
         include: [
           { model: User },
-          { model: Comment }
+          { model: Comment,
+            include: User }
         ]
       });
       const post = dbPostData.get({ plain: true });
-      console.log(post);
+
+      
+      // console.log(post);
+
       res.render('post', { post, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
@@ -43,7 +47,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 // TODO: Dashboard route
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
-
+      
       res.render('dashboard', { loggedIn: req.session.loggedIn });
       
     } catch (err) {
