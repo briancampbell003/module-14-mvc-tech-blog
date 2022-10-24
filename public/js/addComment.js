@@ -5,7 +5,7 @@ const commentFormHandler = async (event) => {
     const newComment = {
       content : document.querySelector('#new-comment').value.trim(),
       date : today,
-      post_id : location.pathname,
+      post_id : document.location.pathname.slice(6,7),
     }
       
     console.log(newComment);
