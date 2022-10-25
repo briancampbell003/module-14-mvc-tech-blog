@@ -36,7 +36,7 @@ header {
 }
 
 main {
-  margin-left: 20vw;
+  margin-left: 10vw;
   margin-right: 10vw;
 }
 
@@ -79,9 +79,7 @@ nav a:hover {
 }
 
 .login-els {
-
   padding: 10px;
-  margin-left: 5%;
   flex-wrap: nowrap;
 }
 
@@ -124,7 +122,6 @@ nav a:hover {
 .container {
   display: flex;
   flex-flow: column wrap;
-  align-content: flex-start;
   align-items: center;
 }
 
@@ -144,4 +141,12 @@ nav a:hover {
   background-color: var(--light);
   border: var(--dark) 2px solid;
   padding: 5px;
+}
+
+.comment-card {
+  background-color: var(--secondary);
+}
+
+.comment-area {
+  margin-top: 20px;
 }

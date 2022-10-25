@@ -1,8 +1,11 @@
 <section class="container">
-    {{#each posts as |post|}}
-    {{> post-cards}}
-    {{/each}}
-
+    {{#if posts}}
+        {{#each posts as |post|}}
+        {{> post-cards}}
+        {{/each}}
+    {{else}}
+        <p>Start making some posts to see them populate here!</p>
+    {{/if}}
     <div class="form-group">
         <button class="btn btn-primary new-post-btn" type="submit">new post</button>
     </div>
