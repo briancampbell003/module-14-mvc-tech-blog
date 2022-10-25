@@ -1,9 +1,11 @@
-{{#each posts as |post|}}
-{{> post-cards}}
-{{/each}}
+<section class="container">
+    {{#each posts as |post|}}
+    {{> post-cards}}
+    {{/each}}
 
-<div class="form-group">
-    <button class="btn btn-primary new-post-btn" type="submit">new post</button>
-</div>
+    <div class="form-group">
+        <button class="btn btn-primary new-post-btn" type="submit">new post</button>
+    </div>
+</section>
 
 <script src="/js/newPostBtn.js"></script>
