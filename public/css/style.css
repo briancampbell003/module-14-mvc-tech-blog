@@ -71,6 +71,7 @@ nav a:hover {
 /* CARDS */
 .card {
   width: 75%;
+  height: fit-content;
   margin: 20px;
   border: 7px double var(--dark);
   border-radius: 10px;
@@ -140,6 +141,7 @@ nav a:hover {
 
 .post-content {
   display: flex;
+  height: fit-content;
   background-color: var(--light);
   border: var(--dark) 2px solid;
   padding: 5px;
