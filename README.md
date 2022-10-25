@@ -6,7 +6,7 @@
 
 ## Description
 
-This project provides users a place to post their ideas and opinions related to coding technologies and approaches. Users are also able to comment on other user posts to provide feedback and contribute to the discourse around web development practices. The application uses nodeJS with express, sequelize, handlebars and custom CSS styling used in a modularly developed Model-View-Controller arrangement.
+This project provides users a place to post their ideas and opinions related to coding technologies and approaches. Users are also able to comment on other user posts to provide feedback and contribute to the discourse around web development practices. The application uses nodeJS with express, sequelize, handlebars and custom CSS styling used in a modularly developed Model-View-Controller arrangement, all of which was built from scratch.
 
 ## Table of Contents
 
@@ -39,13 +39,17 @@ Contributor Covenant, as described at [the Contributor Covenant website](https:/
 
 See screenshots below:
 
+## Future Developments
+
+While the buttons for editing and deleting your posts are present, you will notice they do not currently work. A main goal for future development of this project is to connect those buttons to the database using new PUT and DELETE routes.
+
 ## Questions
 
 If you any questions about this project please reach out to its creator via email at brian.campbell003@gmail.com or on GitHub from their [GitHub userpage](https://www.github.com/briancampbell003). Thank you!
 
 ## Credits
 
-Development followed the logic and even some code snippets from previous exercises and assignments in the Northwestern Coding Boot Camp Full Stack program. At various points web resources like MDN Web Docs and W3Schools were consulted for syntax reminders.
+Development followed the logic and even some code snippets from previous exercises and assignments in the Northwestern Coding Boot Camp Full Stack program. In particularly, most of the user-routes, server files and configuration for database connection have been cribbed from other files. At various points web resources like MDN Web Docs and W3Schools were consulted for syntax reminders.
 
 --
         
