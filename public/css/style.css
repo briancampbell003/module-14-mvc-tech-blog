@@ -92,7 +92,7 @@ nav a:hover {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: var(--tertiary);
+  background-color: var(--primary);
   color: var(--light);
 }
 
@@ -106,6 +106,7 @@ nav a:hover {
 }
 
 .card-body {
+  height: fit-content;
   font-size: 1.4rem;
   text-align: center;
   font-weight: bold;
