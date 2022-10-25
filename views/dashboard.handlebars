@@ -2,9 +2,11 @@
     {{#if posts}}
         {{#each posts as |post|}}
         {{> post-cards}}
+        <button class="btn btn-primary edit-post-btn dash-els" type="click">edit post</button>
+        <button class="btn btn-primary delete-post-btn dash-els" type="click">delete post</button>
         {{/each}}
     {{else}}
-        <p>Start making some posts to see them populate here!</p>
+    <p>Start making some posts to see them populate here!</p>
     {{/if}}
     <div class="form-group">
         <button class="btn btn-primary new-post-btn" type="submit">new post</button>
