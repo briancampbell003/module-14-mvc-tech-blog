@@ -4,22 +4,13 @@ const commentdata = [
   {
     content: 'Unfortunately, you make some very good points...',
     date: 'June 16, 2021',
-    user_id: 1,
-    // user_username: 'Tha_CSS_Kingpin',
-    post_id: 1,
-  },
-  {
-    content: 'Wholeheartedly agree!',
-    date: 'July 12, 2021',
     user_id: 2,
-    // user_username: 'SQL_stan_23',
     post_id: 1,
   },
   {
     content: 'Outrageously well-written, but you are obviously wrong about everything.',
     date: 'October 3, 2021',
-    user_id: 2,
-    // user_username: 'SQL_stan_23',
+    user_id: 1,
     post_id: 2,
   },
 ];

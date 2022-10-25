@@ -1,9 +1,7 @@
 <section class="container">
     {{#if posts}}
         {{#each posts as |post|}}
-        {{> post-cards}}
-        <button class="btn btn-primary edit-post-btn dash-els" type="click">edit post</button>
-        <button class="btn btn-primary delete-post-btn dash-els" type="click">delete post</button>
+        {{> post-cards-dash}}
         {{/each}}
     {{else}}
     <p>Start making some posts to see them populate here!</p>
@@ -14,3 +12,5 @@
 </section>
 
 <script src="/js/newPostBtn.js"></script>
+<script src="/js/editPostBtn.js"></script>
+<script src="/js/delPostBtn.js"></script>

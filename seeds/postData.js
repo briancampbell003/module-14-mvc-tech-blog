@@ -3,7 +3,7 @@ const { Post } = require('../models');
 const postdata = [
   {
     title: 'The Bootstrap Disaster And Its Consequences For Humanity',
-    content: 'The "Bootstrap" CSS framework has been an unmitigated for the human spirit, and its mass implementation indicates cultural decline. I refuse to explain.',
+    content: 'The "Bootstrap" CSS framework has been an unmitigated catastrophe for the human spirit, and its mass implementation indicates cultural decline. I refuse to explain.',
     date: 'May 15, 2021',
     user_id: 1,
   },
