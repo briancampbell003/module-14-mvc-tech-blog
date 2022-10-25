@@ -37,7 +37,13 @@ Contributor Covenant, as described at [the Contributor Covenant website](https:/
 
 ## Tests
 
-See screenshots below:
+See screenshots below, and visit the [deployed application on Heroku](https://techbuzz.herokuapp.com/) to test for yourself!
+Homepage:
+![screenshot of homepage](/public/images/demo1.png)
+A post:
+![screenshot of a post](/public/images/demo2.png)
+User dashboard:
+![screenshot of dashboard](/public/images/demo3.png)
 
 ## Future Developments
 
